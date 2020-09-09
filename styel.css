@@ -1,0 +1,27 @@
+/* Carlos Maldonado */
+
+body {
+    background-color: White;
+    color: Black;
+}
+
+h1 {
+    font-family:Impact;
+}
+
+h2 {
+    font-family:Georgia;
+}
+
+p {
+   font-family:Georgia;
+}
+
+footer {
+    color: Black;
+    text-align: center;
+}
+
+a:hover {
+    font-weight: bold ;
+}
