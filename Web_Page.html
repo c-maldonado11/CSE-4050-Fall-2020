@@ -1,13 +1,32 @@
 <html>
 	<link rel="stylesheet" href="style.css" />
+	<script src="main.js"></script>
 <body>
 	<h1> My Web Page </h1> 
+
+	<nav class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">My Stuff</button>
+		<nav id="myDropdown" class="dropdown-content">
+		  <a href="#">Link 1</a>
+		  <a href="#">Link 2</a>
+		  <a href="#">Link 3</a>
+		</nav>
+	</nav>
+
+	<nav>
+		<button id = "city" onclick ="cityJSON()">Click me</button>
+	</nav>
 
 	<div style="background-color:gray;color:black;padding:5px;">
 
   		<h2>Web Page</h2>
 
-  		<p>This webpage will be updated with CSS and Javascript as the semester progresses The code for the HTML will be available in my GitHub repo linked under this section.</p>
+  		<p id= "intro">This webpage will be updated with CSS and Javascript as the semester progresses The code for the HTML will be available in my GitHub repo linked under this section.
+
+		</p>
+
+		<button id= "f_incr" type ="button" onclick = "increase_func()" >Increase Font Size</button>
+		<button id= "f_decr" type ="button" onclick = "decrease_func()" >Decrease Font Size</button>
 	</div>
 
 	<footer>
