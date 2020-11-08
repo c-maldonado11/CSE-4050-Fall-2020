@@ -9,24 +9,30 @@
 <body> 
 
 	<h1> Welcome to my Webpage! </h1>
+	<p id = "user_welc"></p>
+
 	<nav class="dropdown">
 		<button onclick="myFunction()" class="dropbtn">Menu</button>
 		<nav id="myDropdown" class="dropdown-content">
 			<div class="nav-wrapper container">
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li class="logged-out">
+					<li id="logged-out">
 					  <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
 					</li>
-					<li class="logged-out">
+					<li id="sign-up">
 					  <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
 					</li>
 					<li class="logged-in">
-						<a href="#" class="grey-text" id="logout">Logout</a>
+						<a href="#" class="grey-text" id="logout" onClick ="history.go(0)">Logout</a>
 					  </li>
 				</ul>
 			  </div>
 		</nav>
 	</nav>
+
+	<button class = "dropbtn">
+		<a href="Web_App1.html">Click here for web app 1</a>
+	</button>
 	
 	<nav>
 		<button id = "city" onclick ="cityJSON()">Click me</button>
