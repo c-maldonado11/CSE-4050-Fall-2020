@@ -1,4 +1,3 @@
-alert("Hello, Welcome to my Web Page!")
 
 function increase_func()
 {
