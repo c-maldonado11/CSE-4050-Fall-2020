@@ -1,0 +1,124 @@
+<html>
+	<link rel="stylesheet" href="style.css" />
+	<script src="main.js"></script>
+
+	<head> 
+		<title>Web App 1 </title>
+	</head>
+	
+<body> 
+
+    <p id = "user_welc"></p>
+    <nav class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+		<nav id="myDropdown" class="dropdown-content">
+			<div class="nav-wrapper container">
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li id="logged-out">
+					  <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+					</li>
+					<li id="sign-up">
+					  <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+					</li>
+					<li class="logged-in">
+						<a href="#" class="grey-text" id="logout" onClick ="history.go(0)">Logout</a>
+					  </li>
+				</ul>
+			  </div>
+		</nav>
+    </nav>
+    
+    <button class = "dropbtn">
+		<a href="index.html">Click here to go back</a>
+	</button>
+	<div style="background-color:gray;color:black;padding:5px;">
+
+  		<h2>Web App 1</h2>
+  		<p id= "intro">WEB APP 1 *WIP*
+		</p>
+
+		<button id= "f_incr" type ="button" onclick = "increase_func()" >Increase Font Size</button>
+		<button id= "f_decr" type ="button" onclick = "decrease_func()" >Decrease Font Size</button>
+	</div>
+
+	<footer>
+
+		<i> Created By: </i>
+		<br> <b> Carlos Maldonado </b>
+		<br> <b> CSE 4050 Web Application Development Fall 2020 </b>
+		<br> <a href="https://github.com/c-maldonado11/CSE-4050-Fall-2020"> My GitHub Repo </a>
+
+	</footer>
+
+	 <!-- SIGN UP MODAL -->
+	<div id="modal-signup" class="modal">
+		<div class="modal-content">
+		  <h4>Sign up</h4><br />
+		  <form id="signup-form">
+			<div class="input-field">
+			  <input type="email" id="signup-email" required />
+			  <label for="signup-email">Email address</label>
+			</div>
+			<div class="input-field">
+			  <input type="password" id="signup-password" required />
+			  <label for="signup-password">Choose password</label>
+			</div>
+			<button class="btn yellow darken-2 z-depth-0">Sign up</button>
+		  </form>
+		</div>
+	  </div>
+	
+	  <!-- LOGIN MODAL -->
+	  <div id="modal-login" class="modal">
+		<div class="modal-content">
+		  <h4>Login</h4><br />
+		  <form id="login-form">
+			<div class="input-field">
+			  <input type="email" id="login-email" required />
+			  <label for="login-email">Email address</label>
+			</div>
+			<div class="input-field">
+			  <input type="password" id="login-password" required />
+			  <label for="login-password">Your password</label>
+			</div>
+			<button class="btn yellow darken-2 z-depth-0">Login</button>
+		  </form>
+		</div>
+	  </div>
+
+	  <div class="container" style="margin-top: 40px;">
+		<ul class="collapsible z-depth-0 confirmation" style="border: none;">
+	
+		</ul>
+	  </div>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyChUXqIVaqwFStIm2_Hr-XyzaAZ2knrBWA",
+    authDomain: "my-website-project-fall-2020.firebaseapp.com",
+    databaseURL: "https://my-website-project-fall-2020.firebaseio.com",
+    projectId: "my-website-project-fall-2020",
+    storageBucket: "my-website-project-fall-2020.appspot.com",
+    messagingSenderId: "888726167612",
+  };
+  firebase.initializeApp(firebaseConfig);
+		
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+	
+		// update firestore settings
+</script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="auth.js"></script>
+<script src="index.js"></script>	  
+</body>
+
+<!-- Created 9/03/2020 -->
+
+</html>
