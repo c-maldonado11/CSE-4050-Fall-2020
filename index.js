@@ -19,7 +19,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     }
 
-  } else {
+  } 
+  
+  else {
     // No user is signed in.
     document.getElementById("modal-login").style.display = "initial";
 
