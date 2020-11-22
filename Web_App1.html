@@ -33,13 +33,50 @@
 	</button>
 	<div style="background-color:gray;color:black;padding:5px;">
 
-  		<h2>Web App 1</h2>
-  		<p id= "intro">WEB APP 1 *WIP*
-		</p>
-
-		<button id= "f_incr" type ="button" onclick = "increase_func()" >Increase Font Size</button>
-		<button id= "f_decr" type ="button" onclick = "decrease_func()" >Decrease Font Size</button>
+  		<h2>Welcome to the calculations page!</h2>
+		  <body>This page has three calculators you can use to calculate square root, multiply or divide </body>
+		  
 	</div>
+	
+	<body style="background-color:rgb(255, 255, 255);color:black;padding:5px;">
+	<!-- Square Root Calculator -->
+		<h1>Square Root Calculator</h1>
+		<form name=sqrtForm>
+		Enter Number:
+		<input type="text" name="sqrt1" size=10>
+		<input type="button" value="Calculate" onClick='sqrtMath()'>
+		<br>
+		The Square Root is:
+		<input type="text" name="sqrtAnswer" size=20>
+		</form>
+
+	<!-- Multiplication Calculator -->
+		<h1>Multiplication Calculator</h1>
+		<form name=multForm>
+		Enter First Number:
+		<input type="text" name="multNum1" size=10>
+		Enter Second Number:
+		<input type="text" name="multNum2" size=10>
+		<input type="button" value="Calculate" onClick='multiply()'>
+		<br>
+		The Answer is:
+		<input type="text" name="multAnswer" size=20>
+		</form>
+
+	<!-- Division Calculator -->
+		<h1>Division Calculator</h1>
+		<form name=divForm>
+		Enter First Number:
+		<input type="text" name="divNum1" size=10>
+		Enter Second Number:
+		<input type="text" name="divNum2" size=10>
+		<input type="button" value="Calculate" onClick='division()'>
+		<br>
+		The Answer is:
+		<input type="text" name="divAnswer" size=20>
+		</form>
+	</body>
+
 
 	<footer>
 
@@ -66,10 +103,10 @@
 			<button class="btn yellow darken-2 z-depth-0">Sign up</button>
 		  </form>
 		</div>
-	  </div>
+	</div>
 	
 	  <!-- LOGIN MODAL -->
-	  <div id="modal-login" class="modal">
+	<div id="modal-login" class="modal">
 		<div class="modal-content">
 		  <h4>Login</h4><br />
 		  <form id="login-form">
@@ -84,13 +121,13 @@
 			<button class="btn yellow darken-2 z-depth-0">Login</button>
 		  </form>
 		</div>
-	  </div>
+	</div>
 
-	  <div class="container" style="margin-top: 40px;">
+	<div class="container" style="margin-top: 40px;">
 		<ul class="collapsible z-depth-0 confirmation" style="border: none;">
 	
 		</ul>
-	  </div>
+	</div>
 
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
