@@ -45,3 +45,27 @@ function cityJSON()
   obj = JSON.parse(text);
   alert("This webpage was made in " + obj.city);
 }
+
+//Root Calculator
+function sqrtMath(){
+  var sqrtNum=document.sqrtForm.sqrt1.value;
+  var result = Math.sqrt(sqrtNum);
+  document.sqrtForm.sqrtAnswer.value = result;
+  };
+
+//Divide Calculator
+function division(){
+  var number1 = document.divForm.divNum1.value;
+  var number2 = document.divForm.divNum2.value;
+  var result = number1 / number2;
+  document.divForm.divAnswer.value = result;
+  };
+
+//Multiplication Calculator
+function multiply()
+{
+  var number1 = document.multForm.multNum1.value;
+  var number2 = document.multForm.multNum2.value;
+  var result = number1 * number2;
+  document.multForm.multAnswer.value = result;
+}
