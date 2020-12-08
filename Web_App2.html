@@ -1,0 +1,193 @@
+<html>
+	<link rel="stylesheet" href="style.css" />
+
+	<head> 
+		<title>Web App 2 </title>
+	</head>
+	
+<body> 
+
+    <p id = "user_welc"></p>
+    <nav class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Menu</button>
+		<nav id="myDropdown" class="dropdown-content">
+			<div class="nav-wrapper container">
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li id="logged-out">
+					  <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+					</li>
+					<li id="sign-up">
+					  <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+					</li>
+					<li class="logged-in">
+						<a href="#" class="grey-text" id="logout" onClick ="history.go(0)">Logout</a>
+					  </li>
+				</ul>
+			  </div>
+		</nav>
+    </nav>
+    
+    <button class = "dropbtn">
+		<a href="index.html">Click here to go back</a>
+	</button>
+	<div style="background-color:gray;color:black;padding:5px;">
+
+  		<h2>Welcome to the Currency Converter page!</h2>
+		  <body>This page has a currency converter where you can see the exchange rate from various different currencies. </body>
+		  
+	</div>
+	
+    <body style="background-color:rgb(255, 255, 255);color:black;padding:5px;">
+        <h1>Currency Converter</h1>
+        <div class="container">
+            <div class="currency">
+                <select id="from_currency">
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="USD" selected>USD</option>
+                </select>
+                <input type="number" id="from_ammount" placeholder="0" value=1 />
+            </div>
+            <div class="middle">
+                <button id="exchange">
+                    <a>Convert</a>
+                </button>
+                <div class="rate" id="rate"></div>
+            </div>
+            <div class="currency">
+                <select id="to_currency"><option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD" selected>CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                </select>
+                <input type="number" id="to_ammount" placeholder="0" />
+            </div>
+        </div>
+        
+	</body>
+
+	<footer>
+		<i> Created By: </i>
+		<br> <b> Carlos Maldonado </b>
+		<br> <b> CSE 4050 Web Application Development Fall 2020 </b>
+		<br> <a href="https://github.com/c-maldonado11/CSE-4050-Fall-2020"> My GitHub Repo </a>
+	</footer>
+
+	 <!-- SIGN UP MODAL -->
+	<div id="modal-signup" class="modal">
+		<div class="modal-content">
+		  <h4>Sign up</h4><br />
+		  <form id="signup-form">
+			<div class="input-field">
+			  <input type="email" id="signup-email" required />
+			  <label for="signup-email">Email address</label>
+			</div>
+			<div class="input-field">
+			  <input type="password" id="signup-password" required />
+			  <label for="signup-password">Choose password</label>
+			</div>
+			<button class="btn yellow darken-2 z-depth-0">Sign up</button>
+		  </form>
+		</div>
+	</div>
+	
+	  <!-- LOGIN MODAL -->
+	<div id="modal-login" class="modal">
+		<div class="modal-content">
+		  <h4>Login</h4><br />
+		  <form id="login-form">
+			<div class="input-field">
+			  <input type="email" id="login-email" required />
+			  <label for="login-email">Email address</label>
+			</div>
+			<div class="input-field">
+			  <input type="password" id="login-password" required />
+			  <label for="login-password">Your password</label>
+			</div>
+			<button class="btn yellow darken-2 z-depth-0">Login</button>
+		  </form>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 40px;">
+		<ul class="collapsible z-depth-0 confirmation" style="border: none;">
+		</ul>
+	</div>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyChUXqIVaqwFStIm2_Hr-XyzaAZ2knrBWA",
+    authDomain: "my-website-project-fall-2020.firebaseapp.com",
+    databaseURL: "https://my-website-project-fall-2020.firebaseio.com",
+    projectId: "my-website-project-fall-2020",
+    storageBucket: "my-website-project-fall-2020.appspot.com",
+    messagingSenderId: "888726167612",
+  };
+  firebase.initializeApp(firebaseConfig);
+		
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+	
+</script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="auth.js"></script>
+<script src="index.js"></script>
+<script src="main.js"></script>	  
+</body>
+
+<!-- Created 9/03/2020 -->
+
+</html>
